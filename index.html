@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="exercise">
+        <p>VueJS is pretty cool - {{name}} {{age * 3}}</p>
+        <p>Random Value: {{randomNum()}}</p>
+        <div>
+            <img src="image" style="width:100px;height:100px">
+        </div>
+        <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+        <div>
+            <input type="text" value="{{name}}">
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#exercise",
+            data: {
+                name: "mafiosoSlime",
+                age: 22,
+                image: "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/BabyGroot.jpg"
+            },
+            methods: {
+                randomNum: function () {
+                    return Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
